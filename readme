@@ -1,0 +1,97 @@
+# Project 5 - Graphical Adventure Game
+
+## About
+This project builds a GUI of the Dungeon game that creates a Game consisting of
+- caves
+- tunnels
+- player
+- Otyughs
+- text based game 
+-GUI showing the working of the dungeon
+
+System creates a dungeon with a player and monsters in caves and tunnels from start to end along with the GUI representation of the same.
+
+More information about the system requirements found in the [Link](https://northeastern.instructure.com/courses/90374/assignments/1197220)
+
+The system is built following basic object oriented and SOLID principles.
+
+## Features
+The system has the following features with its Battle and Game Class and controller. 
+
+-Game creation with caves and tunnels with a player and monsters.
+-game with either a wrapping or non wrapping option.
+-random start and end cave. treasures are assigned to random cave.
+-player can detect the monsters with their smell.
+-player can shoot the monster using the arrows.
+- player can either win or loose based on the monsters.
+- can have both text based and GUI based game.
+
+ 
+## How to run
+Jar file is provided along with the package. 
+
+Extract the jar file Battle.jar and run the below command in the terminal
+```
+java -jar <<extracted_jar_file_location>>/Dungeon.jar
+```
+
+Example to run if the downloaded jar file is in the present working directory to run the game in ui
+```
+java -jar res/Dungeon.jar ui
+```
+Example to run if the downloaded jar file is in the present working directory to run the game in text 
+```
+java -jar res/Dungeon.jar text
+```
+
+
+## Design/Model Changes
+
+- there are few extra methods in the implementation but no significant changes.
+- A new interface was added to the dungeon and player class.
+-A new interface was added to the monster class to represent monsters.
+-A new class was used to help the building of the dungeon.
+- A new interface to support the features of the view.
+
+##Example Run 
+The given example run shows the working gui of the dungeon game with the following features. 
+- The player description above the game panel.
+- The ability to move , shoot and pickup by the player.
+-The player can navigate through the dungeon as he finds new ways through the caves.
+- The smell of the Otyugh gets retraced as it gets killed.
+
+##How to use the program
+The input for the game is given through the command line argument
+expected option is text or ui 
+based on the input : This readme covers the ui part of the game as text game is self-explanatory
+Keyboard key and operations.
+up Arrows - Navigate/Move up
+down Arrows - Navigate/Move down
+left Arrows - Navigate/Move left
+right Arrows - Navigate/Move right
+key a - pickup arrow
+key r - pickup ruby 
+key e - pickup sapphire
+key d - pickup diamond.
+key s + arrow keys  + number of caves (1-5) - shoot.
+option to quit the game.
+
+## Assumptions
+
+The system Dungeon is built on the following assumptions:
+
+- the cave and tunnel which is next to the Otyugh has the highest smell level and decreases as the distance increases.
+it implements the kruskal's algorithm.
+it implements the dfs and bfs.
+
+
+##Limitations
+- The movement of the player can be improved by providing click events as an additional input
+- This game supports a maximum of 12 rows and 12 columns game play as it does not implement scroll pane.
+- The game can be further developed to implement animations for the arrows moving and 
+killing, but it is limited to graphical representation for now
+
+##Citations
+
+-Stack Overflow - Where Developers Learn, Share, & Build ...https://stackoverflow.com
+
